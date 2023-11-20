@@ -1,0 +1,152 @@
+@charcet "utf-8";
+
+@font-face{
+   font-family: font1;
+   src: url(fontes/Oceanside\ Typewriter.ttf)
+}
+body{
+    margin: 0;
+    padding: 0;
+    color: rgb(190, 135, 16);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+ }
+
+ h1{
+   font-family: font1;
+ }
+
+ h1, h2{
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+ }
+
+ .wrapper{
+    width: 100%;
+    margin: 0 auto;
+ }
+
+
+ main{
+    display: block;
+    background: #fff;
+ }
+
+
+ .container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: surgir 5s ease-out;
+   animation-timeline: view();
+   animation-range: cover -5% cover 40%;
+ }
+
+ section.modulo p{
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+ }
+
+ section.modulo h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+ }
+
+ section.modulo.content{
+    padding: 40px 0;
+  background: rgb(255,255,0);
+background: linear-gradient(180deg, rgba(255,255,0,1) 39%, rgba(0,36,175,1) 40%, rgba(0,52,142,1) 68%, rgba(0,117,10,1) 69%);
+ }
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+
+
+section.modulo.parallax h1{
+   color: #ffffffcc;
+   text-shadow: 5px 5px 5px #353519;
+   font-size: 4em;
+   text-transform: uppercase;
+   text-align: center;
+   z-index: 50;
+}
+
+section.modulo.parallax:after {
+   content: "";
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   z-index: 10;
+   background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 90%, #ffff00 100%) ; }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+@keyframes surgir {
+   from{
+   opacity: 0;
+   translate: -100vw 0 ;
+   }
+   to{
+      opacity: 1;
+      translate: 0 0;
+   }
+
+}
+
+
+
+@media all and (max-width: 760px) {
+   section.modulo p{
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 1.em;
+   }
+   section.modulo.parallax h1{
+      font-size: 1.5em;
+   }
+
+   section.modulo.content{
+      width: 90%;
+      background: #fff;
+   }
+
+}
+
+section.modulo.parallax-1{
+   background-image: url(https://estaticos.globoradio.globo.com/fotos/2018/06/6b62b847-e4da-4d13-9b52-dc3675ff3aaf.jpg.640x360_q75_box-0%2C0%2C1920%2C1080_crop_detail.jpg);
+}
+
+section.modulo.parallax-2{
+   background-image: url(https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt74d3e429731b30d9/60db9f9fa8fb870f8831997d/f89fd6826037bc671079cbb1ea96bef9b3c97bdd.jpg);
+}
+
+section.modulo.parallax-3{
+   background-image: url(https://static1.purebreak.com.br/articles/9/10/77/09/@/477369-20-anos-da-copa-do-mundo-2002-veja-o-an-opengraph_1200-3.jpg);
+}
